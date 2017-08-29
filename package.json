@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "jest",
-    "transpile": "babel src --out-dir lib --source-maps"
+    "transpile": "babel src --out-dir lib --source-maps",
+    "deploy": "npm run transpile && npm test && npm publish; rm -rf lib",
   },
   "keywords": [],
   "author": "",
