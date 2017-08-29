@@ -30,7 +30,7 @@ There are two types of failure for which you can set the probability: immediatel
 
 ```js
 const fetch = require('fetch-gremlin')({
-  failImmediately: 0.3, // 30% probability of an exception being thrown
+  throwError: 0.3, // 30% probability of an exception being thrown
   badResponse: 0.4 // 40% probability of a bad response
 })
 ...
