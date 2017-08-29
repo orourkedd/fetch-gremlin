@@ -2,11 +2,12 @@ const fetch = require('fetch-everywhere')
 
 module.exports = function(options = {}) {
   const proability = {
-    immediatelyFailure: options.immediatelyFailure || 0.2,
-    badResponse: options.badResponse || 0.2
+    failImmediately:
+      options.failImmediately === undefined ? 0.2 : options.failImmediately,
+    badResponse: options.badResponse === undefined ? 0.2 : options.badResponse
   }
   return function() {
-    if (shouldFail(proability.immediatelyFailure))
+    if (shouldFail(proability.failImmediately))
       throw new Error('Unexpected Error (Fetch Gremlin)')
 
     if (shouldFail(proability.badResponse)) {
