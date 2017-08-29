@@ -6,8 +6,6 @@ A drop-in replacement for `fetch` that injects failure into your application.
 
 Because if your application is failing all of the time, you will be forced to write resilient code.
 
-**NOTE**: This module current only works in the browser.
-
 ## Usage
 
 You normally use fetch like this:

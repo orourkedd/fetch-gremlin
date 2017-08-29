@@ -2,8 +2,7 @@ const fetch = require('fetch-everywhere')
 
 module.exports = function(options = {}) {
   const proability = {
-    throwError:
-      options.throwError === undefined ? 0.2 : options.throwError,
+    throwError: options.throwError === undefined ? 0.2 : options.throwError,
     badResponse: options.badResponse === undefined ? 0.2 : options.badResponse
   }
   return function() {
@@ -15,8 +14,7 @@ module.exports = function(options = {}) {
         status: 500,
         statusText: 'Internal Server Error (Fetch Gremlin)'
       }
-      const responseBlob = new Blob()
-      const response = new Response(responseBlob, responseInit)
+      const response = new Response(null, responseInit)
       return Promise.resolve(response)
     }
 
