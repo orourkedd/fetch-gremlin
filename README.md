@@ -26,7 +26,7 @@ fetch('https://example.com/api/users/1').then(() => { ... })
 
 ## Probability of failure
 
-There are two types of failure for which you can set the probability: immediately throwing an error or returning an Internal Server Error.
+There are two types of failure for which you can set the probability: immediately throwing an error or returning an Internal Server Error.  The default for each type of failure is 0.2 (20%).
 
 ```js
 const fetch = require('fetch-gremlin')({
